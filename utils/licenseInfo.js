@@ -16,10 +16,6 @@ licenses = {
     "name": "GNU GPLv3",
     "link": "https//choosealicense.com/licenses/gpl-3.0",
     "badge": "https://img.shields.io/badge/License-GPLv3-blue.svg"
-  },
-  "No License":
-  {
-    "name": "No License"
   }
 }
 module.exports = "licenses;"

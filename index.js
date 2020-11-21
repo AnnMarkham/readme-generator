@@ -33,10 +33,10 @@ const questions = [
     message: 'List colaborators(if any) with links to their GitHub profiles. Also list any 3rd party assets that require attribution(include creator(s) and links to primary web presence.'
   },
   {
-    type: 'che ceckbox',
+    type: 'checkbox',
     name: 'license',
     message: 'Please select the applicable license.',
-    choices: Object.keys(licenses),
+    choices: ['MIT', 'Apache 2.0', 'GNU GPLv3']
   },
   {
     type: 'input',

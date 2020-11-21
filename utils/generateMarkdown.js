@@ -3,11 +3,11 @@ const fs = require('fs');
 
 // function to generate markdown for README
 function generateMarkdown(data) {
-  licenseObj = licenses[data.license];
+
 
   return `
   # Project Title: ${data.title}
-  
+   
 ## Description ${data.description}
 
 ## Table of Contents:
