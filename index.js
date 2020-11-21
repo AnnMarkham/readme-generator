@@ -1,8 +1,10 @@
 "use strict"
 const inquirer = require('inquirer');
-const licenses = require('./uitls/licenseInfo')
+const generateMarkdown = require('./utils/generateMarkdown');
+const licenses = require('./utils/licenseInfo');
+const fs = require('fs');
 
-// const generateMarkdown = require('./utils/gererateMarkdown.js')
+
 
 const questions = [
   {
@@ -31,7 +33,7 @@ const questions = [
     message: 'List colaborators(if any) with links to their GitHub profiles. Also list any 3rd party assets that require attribution(include creator(s) and links to primary web presence.'
   },
   {
-    type: 'list',
+    type: 'che ceckbox',
     name: 'license',
     message: 'Please select the applicable license.',
     choices: Object.keys(licenses),
@@ -62,20 +64,35 @@ const questions = [
     message: 'Please provide email address and any additonal instructions for contacting you.'
   }
 ]
-const promptUser = () => {
+const promptQuestions = () => {
   return inquirer.prompt(questions);
-};
+}
 
-promptUser();
 
 // // function to write README file
-// function writeToFile(fileName, data) {
-// }
+function writeToFile(fileName, data) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(fileName, data, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve({
+        ok: true,
+        message: fileName + "File Created"
+      });
+    });
+  });
+};
 
 // // function to initialize program
-// function init() {
-
-// }
+function init() {
+  promptQuestions()
+    .then(data => {
+      let markdownData = generateMarkdown(data);
+      writeToFile("README.md", markdownData)
+    });
+}
 
 // // function call to initialize program
-// init();
+init();
