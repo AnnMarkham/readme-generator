@@ -13,12 +13,12 @@ function generateMarkdown(data) {
 ## Description ${data.description}
 
 ## Table of Contents:
-1. [Installation] (#Installation)
-1. [Usage](#Usage)
-1. [Credits](#Credits)
-1. [License](#License)
-1. [Tests](#Tests)
-1. [Questions](#Questions)
+1. [Installation] (#installation)
+1. [Usage](#usage)
+1. [Credits](#credits)
+1. [License](#license)
+1. [Tests](#tests)
+1. [Questions](#questions)
 
 
 ## Installation ${data.installation}
@@ -28,7 +28,7 @@ function generateMarkdown(data) {
 ## Credits ${data.credits}
 
 ## License ${data.license}
-### License Link  "https://choosealicense.com/licenses/${data.license},
+### License Link  "https://choosealicense.com/licenses/${data.license}",
 
 ## Contribution ${data.toContribute}
 
