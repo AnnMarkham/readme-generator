@@ -20,7 +20,7 @@ const questions = [
   {
     type: 'input',
     name: 'installation',
-    message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.'
+    message: 'What are the steps required to install your project?'
   },
   {
     type: 'input',
@@ -30,7 +30,7 @@ const questions = [
   {
     type: 'input',
     name: 'credits',
-    message: 'List colaborators(if any) with links to their GitHub profiles. Also list any 3rd party assets that require attribution(include creator(s) and links to primary web presence.'
+    message: 'List colaborators(if any) with links to their GitHub profiles.'
   },
   {
     type: 'list',
@@ -41,7 +41,7 @@ const questions = [
   {
     type: 'input',
     name: 'toContribute',
-    message: 'Please enter contribution guidelines for your project.  '
+    message: 'Please enter contribution guidelines for your project.'
   },
   {
     type: 'input',
