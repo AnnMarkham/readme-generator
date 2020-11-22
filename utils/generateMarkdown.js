@@ -1,4 +1,4 @@
-licenses = require('./licenseInfo');
+
 const fs = require('fs');
 
 // function to generate markdown for README
@@ -6,7 +6,9 @@ function generateMarkdown(data) {
 
 
   return `
+
   # Project Title: ${data.title}
+![License](https://img.shields.io/badge/License-${data.license}-blue.svg)
    
 ## Description ${data.description}
 
@@ -26,6 +28,7 @@ function generateMarkdown(data) {
 ## Credits ${data.credits}
 
 ## License ${data.license}
+### License Link  "https://choosealicense.com/licenses/${data.license},
 
 ## Contribution ${data.toContribute}
 
